@@ -21,4 +21,4 @@ serverip=`curl -s -H "Metadata-Flavor: Google"  \
 #Run client 
 npm run client $secretkey $serverip:8080;
 
-sudo poweroff
+#sudo poweroff - for some reason this will stop n-2 VMs
