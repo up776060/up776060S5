@@ -40,7 +40,7 @@ echo "Worker VM production will now begin.";
 for i in `seq 1 $N`;
 do
     gcloud compute instances create "$workerName$i"\
-    --machine-type n1-standard \
+    --machine-type n1-standard-1 \
     --tags http-server,https-server \
     --metadata secret=$secretkey,ip=$serverip \
     --metadata-from-file \
