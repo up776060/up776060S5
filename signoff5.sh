@@ -52,8 +52,8 @@ do
     --preemptible
 done;
 
-wait "$!";
-#Waits until background process "server" has finished executing
+wait;
+#Waits until background process has finished
 
 echo "Removing Server.";
 cd ..;

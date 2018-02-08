@@ -21,4 +21,3 @@ serverip=`curl -s -H "Metadata-Flavor: Google"  \
 #Run client 
 npm run client $secretkey $serverip:8080;
 
-#sudo poweroff 
