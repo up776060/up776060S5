@@ -37,7 +37,6 @@ serverip=`curl -s -H "Metadata-Flavor: Google" \
 
 echo "Server is now running.";
 npm run server $secretkey &
-#Server is run in background so built vms can be fully utilised
 
 echo "Worker VM production will now begin.";
 
