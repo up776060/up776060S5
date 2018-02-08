@@ -35,6 +35,10 @@ gcloud config set compute/zone europe-west1-c;
 serverip=`curl -s -H "Metadata-Flavor: Google" \
                                                "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/access-configs/0/external-ip"` \
 
+echo "Server is now running.";
+npm run server $secretkey &
+#Server is run in background so built vms can be fully utilised
+
 echo "Worker VM production will now begin.";
 
 for i in `seq 1 $N`;
@@ -48,8 +52,8 @@ do
     --preemptible
 done;
 
-echo "Server is running.";
-npm run server $secretkey;
+wait "$!";
+#Waits until background process "server" has finished executing
 
 echo "Removing Server.";
 cd ..;
