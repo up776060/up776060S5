@@ -14,3 +14,12 @@ Clone the following repository:
 
 # How we do things
 
+1) Make sure you are in the correct directory
+
+``` cd up776060S5 ```
+
+2) Type the following command into the terminal, replacing N with the number of workers
+
+``` sh signoff5.sh N ```
+
+The program will automatically finish & delete the Worker VMs upon completion
